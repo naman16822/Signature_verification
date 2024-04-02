@@ -1,0 +1,26 @@
+<!-- Assuming this is part of your main template where you have the "Start Verification" button -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Page</title>
+</head>
+<body>
+    <h1>Signature Verification Page</h1>
+    <p>This is the verification section of your Signature.</p>
+    
+    <!-- Button for starting verification -->
+    <button onclick="startVerification()">Start Verification</button>
+
+
+    <script>
+        function startVerification() {
+            // Add JavaScript logic here for starting verification
+            // For example, you can redirect the user to the upload section after verification starts
+            window.location.href = "{% url 'upload' %}";
+        }
+    </script>
+</body>
+</html>
+

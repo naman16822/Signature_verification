@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
+</head>
+<body>
+    <h2>Upload Images</h2>
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="image1">Image 1:</label>
+        <input type="file" id="image1" name="image1" accept="image/*" multiple>
+        <br>
+        <label for="image2">Image 2:</label>
+        <input type="file" id="image2" name="image2" accept="image/*" multiple>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
